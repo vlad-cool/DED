@@ -2,13 +2,9 @@
 
 int test_square_solver()
 {
-    double a = NAN;
-    double b = NAN;
-    double c = NAN;
-    double x1 = NAN;
-    double x2 = NAN;
-    double expected_x1 = NAN;
-    double expected_x2 = NAN;
+    double a = NAN, b = NAN, c = NAN;
+    double x1 = NAN, x2 = NAN;
+    double expected_x1 = NAN, expected_x2 = NAN;
     int n_roots = 0;
     int n_tests = 0;
     int n_errors = 0;

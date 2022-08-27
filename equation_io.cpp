@@ -1,5 +1,10 @@
 #include "equation_io.h"
 
+void flush()
+{
+    while (getchar() != '\n');
+}
+
 int input_square_equation(double *ptr_a, double *ptr_b, double *ptr_c)
 {
     int scanf_res = 0;
@@ -15,7 +20,7 @@ int input_square_equation(double *ptr_a, double *ptr_b, double *ptr_c)
 
         if (scanf_res != SQUARE_COEFF_COUNT)
         {
-            while (getchar() != '\n'); //FLUSH()
+            flush();
             printf("Incorrect input format, try again\n");
         }
     }

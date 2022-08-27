@@ -8,6 +8,9 @@ enum EquationCoefficients {
     SQUARE_COEFF_COUNT = 3
 };
 
+//! @brief flushes input buffer
+void flush();
+
 //! @param [in] ptr_a pointer to coefficient at x^2
 //! @param [in] ptr_b pointer to coefficient at x
 //! @param [in] ptr_c pointer to free coefficient

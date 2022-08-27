@@ -3,6 +3,7 @@
 #include "equation.h"
 #include "equation_io.h"
 #include "test_equation.h"
+#include "useful_functions.h"
 
 int main()
 {

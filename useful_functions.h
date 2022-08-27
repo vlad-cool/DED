@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#ifdef NDEBUG
+#ifndef NDEBUG
 #define ASSERT(x)                                           \
     if (!(x))                                               \
     {                                                       \
@@ -11,8 +11,9 @@
         printf("ERROR: %s; ", #x);                          \
         printf("in file: %s; ", __FILE__);                  \
         printf("in function: %s; ", __PRETTY_FUNCTION__);   \
-        printf("on line: %d\n", __LINE__);                  \
+        printf("on line: %d", __LINE__);                    \
         printf("\033[0m");                                  \
+        printf("\n");                                       \
         abort();                                            \
     }
 #else
@@ -25,11 +26,11 @@ int is_finite(double d);
 
 //! @param [in] left left operand
 //! @param [in] right right operand
-//! @return 1 if left and right are equal
+//! @return 1 if left and right are equal else 0
 int are_equal(double left, double right);
 
-//! @param [in] ptr_1 pointer to double, which should be lesser or equal
-//! @param [in] ptr_2 pointer to double, which should be higher or equal
+//! @param [in] ptr_1 pointer to double, which will become lesser or equal
+//! @param [in] ptr_2 pointer to double, which will become higher or equal
 //! @return 1 if *ptr_2 was lesser than *ptr_1 else 0
 int sort(double *ptr_1, double *ptr_2);
 

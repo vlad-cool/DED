@@ -45,7 +45,7 @@ SolverResult solve_square_equation(double a, double b, double c, double *ptr_x1,
 
     ASSERT(ptr_x1 != NULL);
     ASSERT(ptr_x2 != NULL);
-    ASSERT(x1 != x2);
+    ASSERT(ptr_x1 != ptr_x2);
 
     double x = NAN;
 
@@ -94,7 +94,7 @@ SolverResult solve_square_equation(double a, double b, double c, double *ptr_x1,
                 return INF_ROOTS;
 
             default:
-                ASSERT(0 && "ERROR in solve_square_equation");
+                ASSERT(0);
                 break;
         }
     }
