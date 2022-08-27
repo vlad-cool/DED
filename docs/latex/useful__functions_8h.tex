@@ -1,0 +1,91 @@
+\hypertarget{useful__functions_8h}{}\doxysection{useful\+\_\+functions.\+h File Reference}
+\label{useful__functions_8h}\index{useful\_functions.h@{useful\_functions.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{useful__functions_8h_aca68c0d4ac8df0838e209fb5300f7be3}{ASSERT}}(x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{useful__functions_8h_ab6518dfc289683c67507b90f2688dcda}{is\+\_\+finite}} (double d)
+\item 
+int \mbox{\hyperlink{useful__functions_8h_ac99f11f566b081f041216b5754210349}{are\+\_\+equal}} (double left, double right)
+\item 
+int \mbox{\hyperlink{useful__functions_8h_a29e3f390c02809f57d697367c2eda40b}{sort}} (double $\ast$ptr\+\_\+1, double $\ast$ptr\+\_\+2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{useful__functions_8h_aca68c0d4ac8df0838e209fb5300f7be3}\label{useful__functions_8h_aca68c0d4ac8df0838e209fb5300f7be3}} 
+\index{useful\_functions.h@{useful\_functions.h}!ASSERT@{ASSERT}}
+\index{ASSERT@{ASSERT}!useful\_functions.h@{useful\_functions.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT}{ASSERT}}
+{\footnotesize\ttfamily \#define ASSERT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (!(x))                                               \(\backslash\)}
+\DoxyCodeLine{    \{                                                       \(\backslash\)}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}\(\backslash\)033[1m\(\backslash\)033[40;31m"{}});                       \(\backslash\)}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}ERROR: \%s; "{}}, \#x);                          \(\backslash\)}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}in file: \%s; "{}}, \_\_FILE\_\_);                  \(\backslash\)}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}in function: \%s; "{}}, \_\_PRETTY\_FUNCTION\_\_);   \(\backslash\)}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}on line: \%d"{}}, \_\_LINE\_\_);                    \(\backslash\)}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}});                                  \(\backslash\)}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});                                       \(\backslash\)}
+\DoxyCodeLine{        abort();                                            \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{useful__functions_8h_ac99f11f566b081f041216b5754210349}\label{useful__functions_8h_ac99f11f566b081f041216b5754210349}} 
+\index{useful\_functions.h@{useful\_functions.h}!are\_equal@{are\_equal}}
+\index{are\_equal@{are\_equal}!useful\_functions.h@{useful\_functions.h}}
+\doxysubsubsection{\texorpdfstring{are\_equal()}{are\_equal()}}
+{\footnotesize\ttfamily int are\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{left,  }\item[{double}]{right }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em left} & left operand \\
+\hline
+\mbox{\texttt{ in}}  & {\em right} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if left and right are equal else 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{useful__functions_8h_ab6518dfc289683c67507b90f2688dcda}\label{useful__functions_8h_ab6518dfc289683c67507b90f2688dcda}} 
+\index{useful\_functions.h@{useful\_functions.h}!is\_finite@{is\_finite}}
+\index{is\_finite@{is\_finite}!useful\_functions.h@{useful\_functions.h}}
+\doxysubsubsection{\texorpdfstring{is\_finite()}{is\_finite()}}
+{\footnotesize\ttfamily int is\+\_\+finite (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & number to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if d not (+-\/)infinity and not NaN else 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{useful__functions_8h_a29e3f390c02809f57d697367c2eda40b}\label{useful__functions_8h_a29e3f390c02809f57d697367c2eda40b}} 
+\index{useful\_functions.h@{useful\_functions.h}!sort@{sort}}
+\index{sort@{sort}!useful\_functions.h@{useful\_functions.h}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily int sort (\begin{DoxyParamCaption}\item[{double $\ast$}]{ptr\+\_\+1,  }\item[{double $\ast$}]{ptr\+\_\+2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr\+\_\+1} & pointer to double, which will become lesser or equal \\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr\+\_\+2} & pointer to double, which will become higher or equal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if $\ast$ptr\+\_\+2 was lesser than $\ast$ptr\+\_\+1 else 0 
+\end{DoxyReturn}

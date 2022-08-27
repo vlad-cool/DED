@@ -1,0 +1,80 @@
+\hypertarget{equation_8cpp}{}\doxysection{equation.\+cpp File Reference}
+\label{equation_8cpp}\index{equation.cpp@{equation.cpp}}
+{\ttfamily \#include \char`\"{}equation.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{equation_8h_ade12fbd71b060ce280194d4635982840}{Solver\+Result}} \mbox{\hyperlink{equation_8cpp_ade3cdd7b324bd998067a609c1516117e}{solve\+\_\+linear\+\_\+equation}} (double a, double b, double $\ast$ptr\+\_\+x)
+\item 
+\mbox{\hyperlink{equation_8h_ade12fbd71b060ce280194d4635982840}{Solver\+Result}} \mbox{\hyperlink{equation_8cpp_ab17dc7b0bd1a833f074bcb29dfc9e40e}{solve\+\_\+true\+\_\+square\+\_\+equation}} (double a, double b, double c, double $\ast$ptr\+\_\+x1, double $\ast$ptr\+\_\+x2)
+\item 
+\mbox{\hyperlink{equation_8h_ade12fbd71b060ce280194d4635982840}{Solver\+Result}} \mbox{\hyperlink{equation_8cpp_a3adc84d9d8e59c1f3e4b46345b84bc1e}{solve\+\_\+square\+\_\+equation}} (double a, double b, double c, double $\ast$ptr\+\_\+x1, double $\ast$ptr\+\_\+x2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{equation_8cpp_ade3cdd7b324bd998067a609c1516117e}\label{equation_8cpp_ade3cdd7b324bd998067a609c1516117e}} 
+\index{equation.cpp@{equation.cpp}!solve\_linear\_equation@{solve\_linear\_equation}}
+\index{solve\_linear\_equation@{solve\_linear\_equation}!equation.cpp@{equation.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_linear\_equation()}{solve\_linear\_equation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{equation_8h_ade12fbd71b060ce280194d4635982840}{Solver\+Result}} solve\+\_\+linear\+\_\+equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double $\ast$}]{ptr\+\_\+x }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient at x \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & free coefficient \\
+\hline
+\mbox{\texttt{ out}}  & {\em ptr\+\_\+x} & pointer to root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of roots or INF\+\_\+\+ROOTS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{equation_8cpp_a3adc84d9d8e59c1f3e4b46345b84bc1e}\label{equation_8cpp_a3adc84d9d8e59c1f3e4b46345b84bc1e}} 
+\index{equation.cpp@{equation.cpp}!solve\_square\_equation@{solve\_square\_equation}}
+\index{solve\_square\_equation@{solve\_square\_equation}!equation.cpp@{equation.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_square\_equation()}{solve\_square\_equation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{equation_8h_ade12fbd71b060ce280194d4635982840}{Solver\+Result}} solve\+\_\+square\+\_\+equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{ptr\+\_\+x1,  }\item[{double $\ast$}]{ptr\+\_\+x2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient at x$^\wedge$2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient at x \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & free coefficient \\
+\hline
+\mbox{\texttt{ out}}  & {\em ptr\+\_\+x1} & pointer to lesser or equal root \\
+\hline
+\mbox{\texttt{ out}}  & {\em ptr\+\_\+x2} & pointer to higher or equal root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of roots or INF\+\_\+\+ROOTS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{equation_8cpp_ab17dc7b0bd1a833f074bcb29dfc9e40e}\label{equation_8cpp_ab17dc7b0bd1a833f074bcb29dfc9e40e}} 
+\index{equation.cpp@{equation.cpp}!solve\_true\_square\_equation@{solve\_true\_square\_equation}}
+\index{solve\_true\_square\_equation@{solve\_true\_square\_equation}!equation.cpp@{equation.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_true\_square\_equation()}{solve\_true\_square\_equation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{equation_8h_ade12fbd71b060ce280194d4635982840}{Solver\+Result}} solve\+\_\+true\+\_\+square\+\_\+equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{ptr\+\_\+x1,  }\item[{double $\ast$}]{ptr\+\_\+x2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient at x$^\wedge$2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient at x \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & free coefficient \\
+\hline
+\mbox{\texttt{ out}}  & {\em ptr\+\_\+x1} & pointer to lesser or equal root \\
+\hline
+\mbox{\texttt{ out}}  & {\em ptr\+\_\+x2} & pointer to higher or equal root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of roots 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+a should not be equal to zero, if you aren\`{}t sure use \mbox{\hyperlink{equation_8h_a3adc84d9d8e59c1f3e4b46345b84bc1e}{solve\+\_\+square\+\_\+equation()}} instead 
+\end{DoxyNote}
