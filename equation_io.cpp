@@ -58,7 +58,6 @@ int input_square_equation_from_file(FILE *fp, double *ptr_a, double *ptr_b, doub
     if (scanf_res != 4)
     {
         printf("file reading error\n");
-        fclose(fp);
         return EOF;
     }
 
@@ -83,7 +82,6 @@ int input_square_equation_from_file(FILE *fp, double *ptr_a, double *ptr_b, doub
             if (scanf_res != 2)
             {
                 printf("file reading error\n");
-                fclose(fp);
                 return EOF;
             }
 

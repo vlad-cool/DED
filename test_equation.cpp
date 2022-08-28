@@ -16,6 +16,7 @@ int test_square_solver()
     {
         if (input_square_equation_from_file(fp, &a, &b, &c, &expected_n_roots, &expected_x1, &expected_x2) == EOF)
         {
+            fclose(fp);
             return EOF;
         }
         x1 = NAN;
