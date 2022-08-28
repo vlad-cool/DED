@@ -11,7 +11,7 @@ int main()
     double b = NAN;
     double c = NAN;
     double roots[2] = {NAN, NAN};
-    char command = ' ';
+    int command = ' ';
     SolverResult n_roots = NO_ROOTS;
 
     printf("Press e for solving equation, t for autotests or q to quit\n");
@@ -35,7 +35,13 @@ int main()
             case 't':
                 test_square_solver();
                 break;
+            case 'h':
+                printf("Press e for solving equation, t for autotests or q to quit\n");
+                break;
             case '\n':
+                break;
+            case EOF:
+                return 0;
                 break;
             default:
                 printf("Unknown command!\n");

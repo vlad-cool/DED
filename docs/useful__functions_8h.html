@@ -65,7 +65,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">useful_functions.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -81,12 +82,19 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab6518dfc289683c67507b90f2688dcda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="useful__functions_8h.html#ab6518dfc289683c67507b90f2688dcda">is_finite</a> (double d)</td></tr>
-<tr class="separator:ab6518dfc289683c67507b90f2688dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac99f11f566b081f041216b5754210349"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="useful__functions_8h.html#ac99f11f566b081f041216b5754210349">are_equal</a> (double left, double right)</td></tr>
 <tr class="separator:ac99f11f566b081f041216b5754210349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6518dfc289683c67507b90f2688dcda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="useful__functions_8h.html#ab6518dfc289683c67507b90f2688dcda">is_finite</a> (double d)</td></tr>
+<tr class="separator:ab6518dfc289683c67507b90f2688dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29e3f390c02809f57d697367c2eda40b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="useful__functions_8h.html#a29e3f390c02809f57d697367c2eda40b">sort</a> (double *ptr_1, double *ptr_2)</td></tr>
 <tr class="separator:a29e3f390c02809f57d697367c2eda40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4a7e62d4c9e6808326f3f7a3dbc4658c"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="useful__functions_8h.html#a4a7e62d4c9e6808326f3f7a3dbc4658c">MY_RED_OUTPUT</a> [] = &quot;\033[1m\033[40;31m&quot;</td></tr>
+<tr class="separator:a4a7e62d4c9e6808326f3f7a3dbc4658c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f28c9d21e1172c6511e25c23c6329fe"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="useful__functions_8h.html#a3f28c9d21e1172c6511e25c23c6329fe">MY_NORMAL_OUTPUT</a> [] = &quot;\033[0m&quot;</td></tr>
+<tr class="separator:a3f28c9d21e1172c6511e25c23c6329fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aca68c0d4ac8df0838e209fb5300f7be3" name="aca68c0d4ac8df0838e209fb5300f7be3"></a>
@@ -106,15 +114,17 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (!(x))                                               \</div>
 <div class="line">    {                                                       \</div>
-<div class="line">        printf(<span class="stringliteral">&quot;\033[1m\033[40;31m&quot;</span>);                       \</div>
+<div class="line">        printf(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_variable" href="useful__functions_8h.html#a4a7e62d4c9e6808326f3f7a3dbc4658c">MY_RED_OUTPUT</a>);                        \</div>
 <div class="line">        printf(<span class="stringliteral">&quot;ERROR: %s; &quot;</span>, #x);                          \</div>
 <div class="line">        printf(<span class="stringliteral">&quot;in file: %s; &quot;</span>, __FILE__);                  \</div>
 <div class="line">        printf(<span class="stringliteral">&quot;in function: %s; &quot;</span>, __PRETTY_FUNCTION__);   \</div>
 <div class="line">        printf(<span class="stringliteral">&quot;on line: %d&quot;</span>, __LINE__);                    \</div>
-<div class="line">        printf(<span class="stringliteral">&quot;\033[0m&quot;</span>);                                  \</div>
+<div class="line">        printf(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_variable" href="useful__functions_8h.html#a3f28c9d21e1172c6511e25c23c6329fe">MY_NORMAL_OUTPUT</a>);                     \</div>
 <div class="line">        printf(<span class="stringliteral">&quot;\n&quot;</span>);                                       \</div>
 <div class="line">        abort();                                            \</div>
 <div class="line">    }</div>
+<div class="ttc" id="auseful__functions_8h_html_a3f28c9d21e1172c6511e25c23c6329fe"><div class="ttname"><a href="useful__functions_8h.html#a3f28c9d21e1172c6511e25c23c6329fe">MY_NORMAL_OUTPUT</a></div><div class="ttdeci">const char MY_NORMAL_OUTPUT[]</div><div class="ttdef"><b>Definition:</b> useful_functions.h:7</div></div>
+<div class="ttc" id="auseful__functions_8h_html_a4a7e62d4c9e6808326f3f7a3dbc4658c"><div class="ttname"><a href="useful__functions_8h.html#a4a7e62d4c9e6808326f3f7a3dbc4658c">MY_RED_OUTPUT</a></div><div class="ttdeci">const char MY_RED_OUTPUT[]</div><div class="ttdef"><b>Definition:</b> useful_functions.h:6</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -213,6 +223,35 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 if *ptr_2 was lesser than *ptr_1 else 0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a3f28c9d21e1172c6511e25c23c6329fe" name="a3f28c9d21e1172c6511e25c23c6329fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f28c9d21e1172c6511e25c23c6329fe">&#9670;&nbsp;</a></span>MY_NORMAL_OUTPUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char MY_NORMAL_OUTPUT[] = &quot;\033[0m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a7e62d4c9e6808326f3f7a3dbc4658c" name="a4a7e62d4c9e6808326f3f7a3dbc4658c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7e62d4c9e6808326f3f7a3dbc4658c">&#9670;&nbsp;</a></span>MY_RED_OUTPUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char MY_RED_OUTPUT[] = &quot;\033[1m\033[40;31m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

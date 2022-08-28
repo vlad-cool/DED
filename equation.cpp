@@ -2,6 +2,11 @@
 
 SolverResult solve_linear_equation(double a, double b, double *ptr_x)
 {
+    ASSERT(is_finite(a));
+    ASSERT(is_finite(b));
+
+    ASSERT(ptr_x != NULL);
+
     if (are_equal(a, 0))
     {
         return are_equal(b, 0) ? INF_ROOTS : NO_ROOTS;
@@ -15,6 +20,16 @@ SolverResult solve_linear_equation(double a, double b, double *ptr_x)
 
 SolverResult solve_true_square_equation(double a, double b, double c, double *ptr_x1, double *ptr_x2)
 {
+    ASSERT(is_finite(a));
+    ASSERT(is_finite(b));
+    ASSERT(is_finite(c));
+
+    ASSERT(ptr_x1 != NULL);
+    ASSERT(ptr_x2 != NULL);
+    ASSERT(ptr_x1 != ptr_x2);
+
+    ASSERT(!are_equal(a, 0));
+
     double discriminant = b * b - 4 * a * c;
 
     if (are_equal(discriminant, 0))
@@ -89,6 +104,10 @@ SolverResult solve_square_equation(double a, double b, double c, double *ptr_x1,
 
                     return TWO_ROOTS;
                 }
+
+            case TWO_ROOTS:
+                ASSERT(0);
+                return NO_ROOTS;
 
             case INF_ROOTS:
                 return INF_ROOTS;

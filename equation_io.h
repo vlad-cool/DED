@@ -2,7 +2,9 @@
 #define __equation_io_h_
 
 #include <stdio.h>
+#include <string.h>
 #include "equation.h"
+#include "useful_functions.h"
 
 enum EquationCoefficients {
     SQUARE_COEFF_COUNT = 3
@@ -10,6 +12,10 @@ enum EquationCoefficients {
 
 //! @brief flushes input buffer
 void flush();
+
+//! @param [in] c char to check
+//! @return 1 if c is whitespace newline or something like that else 0
+int is_allowed(char c);
 
 //! @param [in] ptr_a pointer to coefficient at x^2
 //! @param [in] ptr_b pointer to coefficient at x

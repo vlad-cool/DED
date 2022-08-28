@@ -5,20 +5,49 @@ void flush()
     while (getchar() != '\n');
 }
 
+int is_allowed(char c)
+{
+    switch (c)
+    {
+        case '\n':
+            return 1;
+        case '\t':
+            return 1;
+        case ' ':
+            return 1;
+        default:
+            return 0;
+    }
+}
+
 int input_square_equation(double *ptr_a, double *ptr_b, double *ptr_c)
 {
-    int scanf_res = 0;
+    ASSERT(ptr_a != NULL)
+    ASSERT(ptr_b != NULL)
+    ASSERT(ptr_c != NULL)
+    ASSERT(ptr_a != ptr_b)
+    ASSERT(ptr_b != ptr_c)
+    ASSERT(ptr_c != ptr_a)
 
-    while (scanf_res != SQUARE_COEFF_COUNT)
+    int scanf_res = 0;
+    char c;
+
+    while (scanf_res != SQUARE_COEFF_COUNT || c != '\n')
     {
         scanf_res = scanf("%lf %lf %lf", ptr_a, ptr_b, ptr_c);
+        scanf("%c", &c);
 
         if (scanf_res == EOF)
         {
             return EOF;
         }
 
-        if (scanf_res != SQUARE_COEFF_COUNT)
+        while (is_allowed(c) && c != '\n')
+        {
+            scanf("%c", &c);
+        }
+
+        if (scanf_res != SQUARE_COEFF_COUNT || c != '\n')
         {
             flush();
             printf("Incorrect input format, try again\n");
@@ -30,6 +59,14 @@ int input_square_equation(double *ptr_a, double *ptr_b, double *ptr_c)
 
 int input_square_equation_from_file(FILE *fp, double *ptr_a, double *ptr_b, double *ptr_c, int *ptr_n, double *ptr_x1, double *ptr_x2)
 {
+    ASSERT(fp != NULL)
+    ASSERT(ptr_a != NULL)
+    ASSERT(ptr_b != NULL)
+    ASSERT(ptr_c != NULL)
+    ASSERT(ptr_n != NULL)
+    ASSERT(ptr_x1 != NULL)
+    ASSERT(ptr_x2 != NULL)
+
     int scanf_res = 0;
     scanf_res = fscanf(fp, "%lf %lf %lf %d", ptr_a, ptr_b, ptr_c, ptr_n);
 
@@ -74,6 +111,7 @@ int input_square_equation_from_file(FILE *fp, double *ptr_a, double *ptr_b, doub
 
 void output_roots(SolverResult res, double *x)
 {
+    ASSERT(x != NULL)
     switch (res)
     {
         case NO_ROOTS:
