@@ -9,11 +9,7 @@ $(BIN_DIR)/$(EXECUTABLE): $(OBJECTS)
 	mkdir -p $(BIN_DIR)
 	g++ $(OBJECTS) -o $(BIN_DIR)/$(EXECUTABLE) $(FLAGS)
 
-$(BIN_DIR)/main.o: main.cpp
-	mkdir -p $(BIN_DIR)
-	g++ -c $< -o $@ $(FLAGS)
-
-$(BIN_DIR)/%.o: %.cpp %.h
+$(BIN_DIR)/%.o: %.cpp
 	mkdir -p $(BIN_DIR)
 	g++ -c $< -o $@ $(FLAGS)
 
