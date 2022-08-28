@@ -5,21 +5,6 @@ void flush()
     while (getchar() != '\n');
 }
 
-int is_allowed(char c)
-{
-    switch (c)
-    {
-        case '\n':
-            return 1;
-        case '\t':
-            return 1;
-        case ' ':
-            return 1;
-        default:
-            return 0;
-    }
-}
-
 int input_square_equation(double *ptr_a, double *ptr_b, double *ptr_c)
 {
     ASSERT(ptr_a != NULL)
@@ -30,7 +15,7 @@ int input_square_equation(double *ptr_a, double *ptr_b, double *ptr_c)
     ASSERT(ptr_c != ptr_a)
 
     int scanf_res = 0;
-    char c;
+    char c = ' ';
 
     while (scanf_res != SQUARE_COEFF_COUNT || c != '\n')
     {
@@ -42,7 +27,7 @@ int input_square_equation(double *ptr_a, double *ptr_b, double *ptr_c)
             return EOF;
         }
 
-        while (is_allowed(c) && c != '\n')
+        while (isspace(c) && c != '\n')
         {
             scanf("%c", &c);
         }
